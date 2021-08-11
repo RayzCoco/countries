@@ -11,7 +11,7 @@ class Country extends Component {
                         newCountries.map((country, index) => {
                             return (
                                 <Link to={`/country/${country.alpha3Code}`}>
-                                    <div className="bg-white shadow drop-shadow h-full" key={index}>
+                                    <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full" key={index}>
                                         <div>
                                             <img src={country.flag} alt="" />
                                         </div>
@@ -45,7 +45,7 @@ class Country extends Component {
                         countries.map((country, index) => {
                             return (
                                 <Link to={`/country/${country.alpha3Code}`}>
-                                    <div className="bg-white shadow drop-shadow h-full" key={index}>
+                                    <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full" key={index}>
                                         <div>
                                             <img src={country.flag} alt="" />
                                         </div>

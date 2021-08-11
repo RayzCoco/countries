@@ -26,13 +26,13 @@ const CountryDetails = () => {
     return (
         <div className="country-details">
             <div className="container px-4 md:px-0 mx-auto max-w-screen-xl mt-12">
-                <button onClick={() => backToPage()} className="bg-white text-center px-6 py-2 shadow-md rounded text-sm">Back</button>
+                <button onClick={() => backToPage()} className="bg-white dark:bg-gray-700 text-black dark:text-gray-200 text-center px-6 py-2 shadow-md rounded text-sm">Back</button>
                 { country && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
                         <div>
                             <img src={country.flag} alt="" />
                         </div>
-                        <div className="py-6">
+                        <div className="py-6 text-black dark:text-gray-200">
                             <h2 className="mb-4 text-2xl font-bold">{country.name}</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2">
                                 <div className="mb-2 md:mb-0"><span className="font-semibold">Native Name:</span> {country.nativeName}</div>
@@ -52,7 +52,7 @@ const CountryDetails = () => {
                                 <div className="mr-2 mb-2 md:mb-0 font-semibold">Border Countries:</div>
                                 <div className="flex flex-wrap">
                                     { country.borders.map((border) => (
-                                        <div className="bg-white text-center px-5 py-2 mr-2 mb-2 md:mb-0 shadow-md rounded text-xs">{border}</div>
+                                        <div className="bg-white dark:bg-gray-700 text-center px-5 py-2 mr-2 mb-2 md:mb-0 shadow-md rounded text-xs">{border}</div>
                                     ))}
                                 </div>
                             </div>
