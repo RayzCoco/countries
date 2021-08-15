@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 
 const CountryDetails = () => {
     const { id }= useParams();
@@ -8,15 +8,20 @@ const CountryDetails = () => {
 
     useEffect(() => {
         if(id) {
-            fetch(`https://restcountries.eu/rest/v2/alpha/${id}`).then((res) => {
-                return res.json()
-            }).then((data) => {
-                setCountry(data)
-            }).catch((err) => {
-                console.log(err)
-            })
+            fetchData(id)
         }
     }, [])
+
+    const fetchData = (code) => {
+        fetch(`https://restcountries.eu/rest/v2/alpha/${code}`).then((res) => {
+            return res.json()
+        }).then((data) => {
+            setCountry(data)
+            console.log(data)
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
 
     const backToPage = () => {
         history.push('/')
@@ -52,7 +57,9 @@ const CountryDetails = () => {
                                 <div className="mr-2 mb-2 md:mb-0 font-semibold">Border Countries:</div>
                                 <div className="flex flex-wrap">
                                     { country.borders.map((border) => (
-                                        <div className="bg-white dark:bg-gray-700 text-center px-5 py-2 mr-2 mb-2 md:mb-0 shadow-md rounded text-xs">{border}</div>
+                                        <div className="bg-white dark:bg-gray-700 text-center px-5 py-2 mr-2 mb-2 md:mb-0 shadow-md rounded text-xs">
+                                            <Link onClick={() => fetchData(border)} to={`/country/${border}`}>{border}</Link>
+                                        </div>
                                     ))}
                                 </div>
                             </div>

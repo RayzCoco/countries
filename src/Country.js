@@ -13,7 +13,7 @@ class Country extends Component {
                                 <Link to={`/country/${country.alpha3Code}`}>
                                     <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full" key={index}>
                                         <div>
-                                            <img src={country.flag} alt="" />
+                                            <img style={{ height: "12rem" }} className="w-100 object-cover" src={country.flag} alt="" />
                                         </div>
                                         <div className="p-6">
                                             <h2 className="font-bold mb-4">{country.name}</h2>
@@ -47,7 +47,7 @@ class Country extends Component {
                                 <Link to={`/country/${country.alpha3Code}`}>
                                     <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full" key={index}>
                                         <div>
-                                            <img src={country.flag} alt="" />
+                                            <img style={{ height: "13rem" }} className="w-100 object-cover" src={country.flag} alt="" />
                                         </div>
                                         <div className="p-6">
                                             <h2 className="font-bold mb-4">{country.name}</h2>
