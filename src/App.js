@@ -23,12 +23,17 @@ class App extends Component {
     }
 
     fetch('https://restcountries.eu/rest/v2/all').then((res) => {
+      if(!res.ok) {
+        throw Error("could not fetch the data")
+      }
       return res.json()
     }).then((data) => {
       this.setState({
         countries: data.slice(0, 10),
         isLoaded: true
       })
+    }).catch((err) => {
+      console.log(err.message)
     })
   }
 

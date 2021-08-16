@@ -10,8 +10,8 @@ class Country extends Component {
                     return (
                         newCountries.map((country, index) => {
                             return (
-                                <Link to={`/country/${country.alpha3Code}`}>
-                                    <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full" key={index}>
+                                <Link to={`/country/${country.alpha3Code}`} key={index}>
+                                    <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full">
                                         <div>
                                             <img style={{ height: "12rem" }} className="w-100 object-cover" src={country.flag} alt="" />
                                         </div>
@@ -42,10 +42,10 @@ class Country extends Component {
             }else {
                 if(isLoaded) {
                     return (
-                        countries.map((country, index) => {
+                        countries.map((country, i) => {
                             return (
-                                <Link to={`/country/${country.alpha3Code}`}>
-                                    <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full" key={index}>
+                                <Link to={`/country/${country.alpha3Code}`} key={i}>
+                                    <div className="bg-white dark:bg-gray-700 dark:text-gray-200 shadow drop-shadow h-full">
                                         <div>
                                             <img style={{ height: "13rem" }} className="w-100 object-cover" src={country.flag} alt="" />
                                         </div>
