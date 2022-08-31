@@ -1,12 +1,12 @@
-# Title
+# Get all the country with API
 
 Get country with country API challenge
 
-## The challenge
+## Overview
 
-Your challenge is to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
+The challenge is to integrate with the [REST Countries API](https://restcountries.eu) to pull country data and display it like in the designs.
 
-You can use any JavaScript framework/library on the front-end such as [React](https://reactjs.org) or [Vue](https://vuejs.org). You also have complete control over which packages you use to do things like make HTTP requests or style your project.
+## Objectives
 
 Users should be able to:
 
@@ -19,5 +19,6 @@ Users should be able to:
 
 ## Steps to Run
 
-1. Start by running `npm install`
-2. Followed by `npm run start`
+1. Head over to branch deployV2
+2. Start by running `npm install`
+3. Followed by `npm run start`
