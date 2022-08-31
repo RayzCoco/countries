@@ -19,5 +19,6 @@ Users should be able to:
 
 ## Steps to Run
 
-1. Start by running `npm install`
-2. Followed by `npm run start`
+1. Head over to branch deployV2
+2. Start by running `npm install`
+3. Followed by `npm run start`
